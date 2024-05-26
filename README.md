@@ -1,0 +1,1 @@
+Szükséges SQL az adatbázishoz csatolva.
