@@ -1,0 +1,19 @@
+
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `firstName` text NOT NULL COLLATE utf8_general_ci,
+  `lastName` text COLLATE utf8_general_ci,
+  `address` varchar(255) NOT NULL COLLATE utf8_general_ci,
+  `tel` varchar(15) NOT NULL,
+  `email` varchar(255) COLLATE utf8_general_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+ALTER TABLE `user`
+MODIFY COLUMN `tel` varchar(15) NOT NULL;
+
+INSERT INTO `user` (`id`, `firstName`, `lastName`, `address`, `tel`, `email`) VALUES
+(1, 'Hosszuhaju', 'Kopasz', 'Jardaszigetek', '06307032146', 'email@email.com'),
+(2, 'Rovidhaju', 'Nemkopasz', 'Tengeriso', '06307032146', 'masikemail@email.com'),
+(3, 'Valaki', 'Más', 'Itt', '06307032150', 'egyemail@email.com'),
+(4, 'Fiktív', 'Ember', 'Ott', '06307032160', 'kettoemail@email.com');
+

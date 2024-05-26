@@ -1,0 +1,46 @@
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+
+
+CREATE TABLE `vehicle` (
+  `id` int(11) NOT NULL,
+  `brand` text NOT NULL COLLATE utf8_general_ci,
+  `model` text COLLATE utf8_general_ci,
+  `chassisNumber` text NOT NULL COLLATE utf8_general_ci,
+  `odometer` int(11) NOT NULL,
+  `basePrice` int(11) NOT NULL,
+  `kmCost` int(11) NOT NULL,
+  `imgUrl` varchar(255) COLLATE utf8_general_ci DEFAULT NULL,
+  `status` text NOT NULL COLLATE utf8_general_ci,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+
+INSERT INTO `vehicle` (`id`, `brand`, `model`, `chassisNumber`, `odometer`, `basePrice`, `kmCost`, `imgUrl`, `status`) VALUES
+(1, 'VW', 'GOLF', 'CN123', 1000, 200, 5, 'https://kep.cdn.index.hu/1/0/3006/30069/300692/30069227_2308561_fd98aa2bcfb30e7af51012cf5e6e5692_wm.jpg', 'szabad'),
+(2, 'Skoda', 'Octavia', 'CN456', 1000, 220, 6, 'https://cf-cdn-v5.skoda.at/media/Poi_Model_Image_Component/4456-model-image/dh-890-3360c9/4626689e/1710329494/front-0001.png', 'szabad'),
+(3, 'Honda', 'Civic', 'CN789', 1000, 180, 4, 'https://imgd.aeplcdn.com/664x374/n/cw/ec/27074/civic-exterior-right-front-three-quarter-148155.jpeg?q=80', 'szabad'),
+(4, 'Fiat', '500', 'CN987', 300, 120, 2, 'https://www.vmax.si/wp-content/uploads/2024/03/NASLOV-fiat-500-tributo-trepiuno-5.jpg', 'szabad'),
+(5, 'Suzuki', 'S-Cross', 'CN654', 2400, 240, 6, 'https://auto.suzuki.hu/storage/scross-sections/January2022/LnRlSOq4OYqWgPrpu7gkKF877hYf37bp3e3QUbyg.png', 'szabad');
+
+
+
+ALTER TABLE `vehicle`
+  ADD PRIMARY KEY (`id`);
+
+
+ALTER TABLE `vehicle`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

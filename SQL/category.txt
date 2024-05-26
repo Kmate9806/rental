@@ -1,0 +1,14 @@
+CREATE TABLE `category` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` text NOT NULL COLLATE utf8_general_ci,
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+
+INSERT INTO `category` (`id`, `title`) VALUES
+(1, 'Hatch'),
+(2, 'Családi'),
+(3, 'Kombi'),
+(4, 'SUV'),
+(5, 'Mini'),
+(6, 'Sedan');
+
